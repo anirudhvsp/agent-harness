@@ -15,6 +15,7 @@ from rich.text import Text
 from rich import print as rprint
 
 from agent.core import Agent
+from memory import database
 
 app = typer.Typer(add_completion=False)
 console = Console()
@@ -70,7 +71,9 @@ def list_tools(agent: Agent):
 
 @app.command()
 def main(prompt: str = typer.Argument(None, help="Single-shot prompt (omit for REPL mode)")):
-    agent = Agent()
+    database.init_db()
+    session_id = "default_session"
+    agent = Agent(session_id=session_id)
 
     if prompt:
         # ── Single-shot mode ──────────────────────────────────────────────
