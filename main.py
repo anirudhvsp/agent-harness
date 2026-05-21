@@ -22,12 +22,12 @@ console = Console()
 
 def print_banner():
     console.print(Panel(
-        "[bold]AI Agent Harness[/bold]\n"
+        "[bold]Catalyst-AI Agent[/bold]\n"
         "[dim]Type your message, or:[/dim]\n"
         "  [cyan]/reset[/cyan]  — clear conversation\n"
         "  [cyan]/tools[/cyan]  — list available tools\n"
         "  [cyan]/exit[/cyan]   — quit",
-        title="[bold cyan]agent[/bold cyan]",
+        title="[bold cyan]Catalyst-AI Agent[/bold cyan]",
         border_style="cyan",
     ))
 
@@ -54,7 +54,7 @@ def run_turn(agent: Agent, user_input: str):
         console.print()
         console.print(Panel(
             Markdown(full_text),
-            title="[bold green]agent[/bold green]",
+            title="[bold green]Catalyst-AI Agent[/bold green]",
             border_style="green",
         ))
 

@@ -89,4 +89,4 @@ class Agent:
 
         else:
             if on_text:
-                on_text(f"\n[Agent stopped after {settings.MAX_ITERS} iterations]")
+                on_text(f"\n[Catalyst-AI stopped after {settings.MAX_ITERS} iterations]")
